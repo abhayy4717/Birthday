@@ -377,11 +377,12 @@
     font-style:italic;
   }
   .letter-body {
-    font-family:'Dancing Script',cursive;
-    font-size:1.25rem;
+    font-family:'Quicksand',sans-serif;
+    font-size:1.05rem;
     color:#5c3d0a;
     line-height:2;
     white-space:pre-line;
+    font-weight:600;
   }
   .letter-close {
     position:absolute;
@@ -647,7 +648,7 @@
     </div>
   </div>
 
-  <div class="hold-text" id="holdText">💕 Hold on screen to connect our hearts 💕</div>
+  <div class="hold-text" id="holdText">💕 Touch the screen to connect our Hearts..!💕</div>
 </div>
 
 <!-- Password Popup -->
@@ -660,7 +661,7 @@
     <input type="password" id="pwInput" placeholder="Enter password..." maxlength="10"
            onkeydown="if(event.key==='Enter')checkPassword()"/>
     <br>
-    <button onclick="checkPassword()">Enter ❤️</button>
+    <button onclick="checkPassword()">Enter </button>
     <div id="pwError" class="error" style="display:none">❌ Wrong password! Try again...</div>
   </div>
 </div>
@@ -695,11 +696,17 @@
   <div class="confetti-container" id="confettiContainer"></div>
   <div class="hb-title" style="z-index:2">🎂 Happy Birthday My MDM 🎂</div>
   <div class="hb-subtitle" style="z-index:2">Wishing you a day as magical as you are ✨</div>
-  <div style="position:absolute;bottom:110px;right:38px;z-index:10;display:flex;flex-direction:column;align-items:center;gap:4px">
-    <div class="note-btn" id="noteBtn" onclick="openLetter()">📜</div>
+  <!-- Right side buttons with hints -->
+  <div style="position:absolute;bottom:100px;right:16px;z-index:10;display:flex;flex-direction:column;align-items:flex-end;gap:20px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="font-family:Quicksand,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.4);font-weight:400;letter-spacing:0.02em;">press note to read</span>
+      <div class="note-btn" id="noteBtn" onclick="openLetter()">📜</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="font-family:Quicksand,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.4);font-weight:400;letter-spacing:0.02em;">press audio to play music</span>
+      <div class="cd-btn" id="cdBtn" onclick="toggleMusic()" style="position:static;margin:0;">💿</div>
+    </div>
   </div>
-  <!-- CD Player -->
-  <div class="cd-btn" id="cdBtn" onclick="toggleMusic()" title="Play/Pause Birthday Song">💿</div>
   <!-- Next page turn -->
   <button class="next-btn" onclick="goToPage(4)">📖 Next Chapter →</button>
 
@@ -719,14 +726,11 @@
     <div class="letter-body" id="letterBody">
 My dearest MDM,
 
-Heyy..! , My mdm , bibi ji , bby , mdmoo , AAlU , kshama ji , jhagdalu aurat, 
-fvrt aurat , my aurat , one and only mdm , its not enought for you but so , 
-mai soch rha tha apse shaadi vadi krke apki jindgi m hmesha ke liye aisa kch 
-rhne vhne ka kyuki ab dekh he rhi ho mausam kitna kharab rehta h , bichara mai 
-khin khoo vo na jaun kisi galat hatho m na pd jaun mai isliye . Dont you ever think 
-ki i don't love you ( its a variable ) My love for you is not same every day. 
-Some days it feels calm, some days its at its peak. But one thing never changes 
-— there will never be a day when I stop loving you ❤️. 
+Heyy..! , My mdm , bibi ji , bby , mdmoo , AAlU , kshama ji , jhagdalu aurat, fvrt aurat , my aurat , one and only mdm , its not enought for you but so... 
+Mai soch rha tha apse shaadi vadi krke apki jindgi m hmesha ke liye aisa kch rhne vhne ka kyuki ab dekh he rhi ho bhr mahol kitna kharab rehta h , bichara mai khin khoo vo na jaun kisi galat hatho m na pd jaun mai isliye, 
+aur ky mtlb kisi aur ki jindagi khrb krna ,isse ache hum dono he sth m dkhte hain apna future...
+By not making this letter too long, let's make our life too long and happy together. And yes on more Dont you ever think ki i don't love you ( its a variable ) My love for you is not same every day. 
+Some days it feels calm, some days its at its peak. But one thing never changes — there will never be a day when I stop loving you ❤️. 
 
 Today is your day, and I want you to know...
 
@@ -752,7 +756,7 @@ ABHAYY...
   </div>
   <div id="p4hug" style="display:none;flex-direction:column;align-items:center;z-index:2">
     <div class="hug-couple">🫂</div>
-    <div class="hug-msg">There is a virtual hug for you MDM! 🤗💕</div>
+    <div class="hug-msg">There is a virtual hug for you MDM! and many more 🤗💕</div>
     <div style="margin-top:8px;font-family:'Quicksand';color:#888;font-size:0.9rem">(Feel it in your heart 💖)</div>
     <button class="btn-yes" style="margin-top:28px" onclick="goToPage(5)">Next → 💫</button>
   </div>
