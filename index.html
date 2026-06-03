@@ -166,8 +166,9 @@
     margin-bottom:40px;
     text-shadow:2px 4px 0 rgba(233,30,99,0.15);
   }
-  .p2-hearts { font-size:2rem; margin-bottom:20px; animation:heartbeat 1.5s ease infinite; }
-  .btn-row { display:flex; gap:24px; align-items:center; }
+  .p2-hearts { font-size:2rem; margin-bottom:20px; animation:heartbeat 1.5s ease infinite; text-align:center; width:100%; }
+  .btn-row { display:flex; gap:24px; align-items:center; justify-content:center; }
+  #p2content { display:flex; flex-direction:column; align-items:center; text-align:center; }
   .btn-yes, .btn-no {
     padding:18px 50px;
     border-radius:50px;
@@ -377,12 +378,11 @@
     font-style:italic;
   }
   .letter-body {
-    font-family:'Quicksand',sans-serif;
-    font-size:1.05rem;
+    font-family:'Dancing Script',cursive;
+    font-size:1.25rem;
     color:#5c3d0a;
     line-height:2;
     white-space:pre-line;
-    font-weight:600;
   }
   .letter-close {
     position:absolute;
@@ -696,14 +696,16 @@
   <div class="confetti-container" id="confettiContainer"></div>
   <div class="hb-title" style="z-index:2">🎂 Happy Birthday My MDM 🎂</div>
   <div class="hb-subtitle" style="z-index:2">Wishing you a day as magical as you are ✨</div>
-  <!-- Right side buttons with hints -->
-  <div style="position:absolute;bottom:100px;right:16px;z-index:10;display:flex;flex-direction:column;align-items:flex-end;gap:20px;">
+  <!-- Right side: note on top, cd below, each with hint -->
+  <div style="position:absolute;bottom:30px;right:20px;z-index:10;display:flex;flex-direction:column;align-items:flex-end;gap:22px;">
+    <!-- Note row -->
     <div style="display:flex;align-items:center;gap:10px;">
-      <span style="font-family:Quicksand,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.4);font-weight:400;letter-spacing:0.02em;">press note to read</span>
+      <span style="font-family:Quicksand,sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.38);font-weight:400;letter-spacing:0.03em;">press note to read</span>
       <div class="note-btn" id="noteBtn" onclick="openLetter()">📜</div>
     </div>
+    <!-- CD row -->
     <div style="display:flex;align-items:center;gap:10px;">
-      <span style="font-family:Quicksand,sans-serif;font-size:0.72rem;color:rgba(255,255,255,0.4);font-weight:400;letter-spacing:0.02em;">press audio to play music</span>
+      <span style="font-family:Quicksand,sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.38);font-weight:400;letter-spacing:0.03em;">press audio to play music</span>
       <div class="cd-btn" id="cdBtn" onclick="toggleMusic()" style="position:static;margin:0;">💿</div>
     </div>
   </div>
